@@ -6,15 +6,15 @@ on:
       kernel_source:
         description: '🔗 URL kernel source'
         required: true
-        default: 'https://github.com/lynxdevproject/kernel-begonia'
+        default: 'https://github.com/NothingOSS/android_kernel_6.1_nothing_mt6878'
       kernel_branch:
         description: '🌿 Branch kernel source'
         required: true
-        default: 'main'
+        default: 'mt6878/Tetris/16b'
       defconfig:
         description: '🧪 Kernel defconfig'
         required: true
-        default: 'begonia_user_defconfig'
+        default: 'gki_defconfig'
       anykernel:
         description: '📦 Use AnyKernel3 packaging?'
         required: true
@@ -46,7 +46,7 @@ jobs:
   build-kernel:
     runs-on: ubuntu-latest
     env:
-      TZ: Asia/Jakarta
+      TZ: Asia/Malaysia
       OUT_DIR: out
 
     steps:
